@@ -1,1 +1,29 @@
-<p>courses works!</p>
+<table mat-table [dataSource]="courses" class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="courseid">
+    <th mat-header-cell *matHeaderCellDef>courseid</th>
+    <td mat-cell *matCellDef="let element"> {{ element.position }} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef="let element"> {{ element.category }} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let element"> {{ element.price }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="visibleColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: visibleColumns;"></tr>
+</table>
