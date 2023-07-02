@@ -6,7 +6,7 @@ import { Course } from "../model/course.model";
   templateUrl: "./courses.component.html",
   styleUrls: ["./courses.component.scss"]
 })
-export class CoursesComponent  {
+export class CoursesComponent {
 
   courses: Course[] = [
     {courseid: 1, name: "Curso de Java", category: "Back-end Software Development", price: 45},
